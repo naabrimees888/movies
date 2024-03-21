@@ -16,21 +16,27 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="search">
-        <h1>Filmide otsing</h1>
-        <input value={searchTerm} onChange={updateSearchTerm} />
-        <button onClick={search}>Otsi</button>
+    <section>
+      <div className='header'>
+      <h1>Filmide otsing</h1>
       </div>
-      <div className="searchResults">
-        <h2>Leitud filmid</h2>
-        <ul>
-          {searchResults.map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
-          ))}
-        </ul>
+      <div className="container">
+        <div className='search-box'>
+          <div className="search-field">
+            <input value={searchTerm} onChange={updateSearchTerm} />
+            <button onClick={search}>Otsi</button>
+          </div>
+          <div className="search-results">
+            <h2>Leitud filmid</h2>
+            <ul>
+              {searchResults.map((movie) => (
+                <li key={movie.id}>{movie.title}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
