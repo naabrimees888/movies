@@ -7,19 +7,7 @@
 .header {
   width: 100%;
   height: 5rem;
-  background-color: #032541;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 5rem;
-  background-color: #032541;
+  background-color: #5b5a5a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +26,7 @@
 }
 
 .search-field {
-  background-color: #032541;
+  background-color: #5b5a5a;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -69,13 +57,13 @@ button {
   border: none;
   border-radius: 50px;
   width: 5rem;
-  background-color: #00bcd4;
+  background-color: #d47800a8;
   cursor: pointer;
   font-size: 1rem;
 }
 
 button:hover {
-  background-color: #027583;
+  background-color: #d47900;
   color: #fff;
 }
 

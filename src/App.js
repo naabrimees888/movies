@@ -21,7 +21,7 @@ function App() {
     setSelectedMovie(movie);
   }
 
-  const baseURL = 'https://image.tmdb.org/t/p/w500/';
+  const imageBaseURL = 'https://image.tmdb.org/t/p/w500/';
 
   return (    
     <section>
@@ -41,10 +41,10 @@ function App() {
               <div className="selected-movie">
                 <h2>{selectedMovie.title} ({(new Date(selectedMovie.release_date)).getFullYear()})</h2>
                 <div className="selected-movie-image-details">
-                  <img src={`${baseURL}/${selectedMovie.poster_path}`} alt={selectedMovie.title} />
+                  <img src={`${imageBaseURL}/${selectedMovie.poster_path}`} alt={selectedMovie.title} />
                   <div className='selected-movie__details'>
                     <p><strong>Ülevaade:</strong> {selectedMovie.overview}</p>
-                    <p><strong>Avadatud:</strong> {(new Date(selectedMovie.release_date)).getFullYear()}</p>
+                    <p><strong>Avaldatud:</strong> {(new Date(selectedMovie.release_date)).getFullYear()}</p>
                     <p><strong>Keskmine hinne:</strong> {selectedMovie.vote_average}</p>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ function App() {
               <div className="movie-grid">
                 {searchResults.map((movie) => (
                   <div key={movie.id} className="movie-card"  onClick={() => updateSelectedMovie(movie)}>
-                    <img src={`${baseURL}/${movie.poster_path}`} alt={movie.title} />
+                    <img src={`${imageBaseURL}/${movie.poster_path}`} alt={movie.title} />
                     <h3>{movie.title} ({(new Date(movie.release_date)).getFullYear()})</h3>
                     <p className="overview"><strong>Ülevaade:</strong> {movie.overview}</p>
                     <p><strong>Keskmine hinne:</strong> {movie.vote_average}</p>
@@ -65,7 +65,6 @@ function App() {
           </div>
         </div>        
       </div>
-      <div className='footer'></div>
     </section>
   );
 }
